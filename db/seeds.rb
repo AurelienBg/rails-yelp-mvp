@@ -37,3 +37,5 @@ amazing.save
 superyummy.save
 bof.save
 miam.save
+
+miam.restaurant = bristol

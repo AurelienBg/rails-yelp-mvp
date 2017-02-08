@@ -1,0 +1,4 @@
+<h1>Review of your choice</h1>
+<h2><%= @review.restaurant.name %></h2>
+<p><%= @review.restaurant.address %></p>
+<p><%= link_to "Back to restaurant", restaurants_path(:restaurant) %></p>
