@@ -1,14 +1,11 @@
 class ReviewsController < ApplicationController
 
-  before_action :set_review, only: [:show ]
-  before_action :find_restaurant, only: [:new, :create ]
+  # before_action :set_review, only: [:show ]
+  before_action :find_restaurant, only: [:create ]
 
-  def new
-    @review = Review.new
-  end
-
-  def show
-  end
+  # def new
+  #   @review = Review.new
+  # end
 
   def create
     @review = Review.new(review_params)
@@ -22,9 +19,9 @@ class ReviewsController < ApplicationController
 
   private
 
-  def set_restaurant
-    @review.restaurant = Review.find(params[:id])
-  end
+  # def set_restaurant
+  #   @review.restaurant = Review.find(params[:id])
+  # end
 
   def review_params
     params.require(:review).permit(:content, :rating, :restaurant_id)

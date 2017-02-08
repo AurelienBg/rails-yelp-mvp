@@ -14,4 +14,11 @@
     <li> <%= review.content %> (<%= review.rating %>) </li>
   <% end %>
 </ul>
-<p><%= link_to "Add a new review", new_restaurant_review_path(@restaurant), class: "btn btn-primary" %></p>
+
+<h1>Add a new review</h1>
+
+<%= simple_form_for([@restaurant, @review]) do |f| %>
+  <%= f.input :content, input_html: {class:"my_input_class", id:'js-input'}, label_html:{class:"my_label_class"}, wrapper_html:{class:"my_wrapper_class"} %>
+  <%= f.input :rating %>
+  <%= f.submit %>
+<% end %>

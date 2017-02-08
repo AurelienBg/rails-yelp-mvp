@@ -10,6 +10,7 @@ class RestaurantsController < ApplicationController
   end
 
   def show
+    @review = Review.new
   end
 
   def edit
@@ -34,12 +35,12 @@ class RestaurantsController < ApplicationController
     redirect_to restaurants_path
   end
 
-  def top
-    @restaurants = Restaurant.where(stars: 3)
-  end
+  # def top
+  #   @restaurants = Restaurant.where(stars: 3)
+  # end
 
-  def chef
-  end
+  # def chef
+  # end
 
   private
 
