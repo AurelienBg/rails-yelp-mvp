@@ -2,7 +2,11 @@
 <h2><%= @restaurant.name %></h2>
 <p><%= @restaurant.address %></p>
 
-<p><%= link_to "Back to restaurant list", restaurants_path %></p>
+<div class="list-inline">
+  <li> <%= link_to "All", restaurants_path, class: "btn btn-primary" %></li>
+  <li> <%= link_to "Edit", edit_restaurant_path(@restaurant), class: "btn btn-success" %></li>
+  <li> <%= link_to "Delete", restaurant_path(@restaurant), method: :delete, class: "btn btn-danger" %></li>
+</div>
 
 <h3>See all reviews</h3>
 <ul>
